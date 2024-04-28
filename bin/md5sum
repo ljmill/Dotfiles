@@ -1,0 +1,9 @@
+#!/bin/zsh
+
+# Calculate the MD5 checksum
+checksum=$(echo -n "$1" | md5 -q -s "$1")
+
+# Copy the checksum to the clipboard
+echo -n "$checksum" | pbcopy
+
+# echo "MD5 checksum copied to clipboard: $checksum"

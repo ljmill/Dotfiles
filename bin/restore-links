@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+cp -sf ~/dotfiles/.zshrc $HOME
