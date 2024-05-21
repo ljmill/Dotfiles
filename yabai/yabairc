@@ -56,12 +56,6 @@ yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^Karabiner-Elements$" manage=off
 
 # JankyBorders
-options=(
-	style=round
-	width=8.0
-	hidpi=off
-	active_color=0xfff70000
-	inactive_color=0x00000000
-)
-
-borders "${options[@]}" &
+if [ -f $HOME/.config/borders/bordersrc ]; then
+    source $HOME/.config/borders/bordersrc
+fi

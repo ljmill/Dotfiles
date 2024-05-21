@@ -1,7 +1,16 @@
 #!/bin/zsh
 
-cp -Rsf $HOME/dotfiles/yabai $HOME/.config
-cp -Rsf $HOME/dotfiles/skhd $HOME/.config
-cp -Rsf $HOME/dotfiles/borders $HOME/.config
+os_type=$(uname -s)
 
+if [[ "$os_type" == "Darwin" ]]; then
+    cp -Rsf $HOME/dotfiles/yabai $HOME/.config
+    cp -Rsf $HOME/dotfiles/skhd $HOME/.config
+    cp -Rsf $HOME/dotfiles/borders $HOME/.config
+else
+    echo "Unknown operating system: $os_type"
+    exit 1
+fi
+
+cp -Rsf $HOME/dotfiles/alacritty $HOME/.config
 cp -sf $HOME/dotfiles/.zshrc $HOME
+cp -sf $HOME/dotfiles/.p10k.zsh $HOME
