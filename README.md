@@ -12,3 +12,4 @@ Brew install:
 * zsh-syntax-highlighting
 * zsh-autosuggestions
 * eza
+* fzf
